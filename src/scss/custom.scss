@@ -1,0 +1,14 @@
+
+$body-bg: #1F2430;
+
+
+$theme-colors: (
+	"primary": #292f3d,
+	"secondary": #1F2430,
+	"light": #f8f9fabb,
+	"success": #09F7a0,
+	"danger": #E95678
+	);
+
+	
+	@import '~bootstrap/scss/bootstrap.scss';
