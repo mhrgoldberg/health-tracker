@@ -4,7 +4,6 @@
   height: 100vh;
 }
 
-
 .navbar-span {
   width: 100%;
   display: flex;
@@ -17,17 +16,24 @@
   width: fit-content + 20px;
 }
 
-.form-container{
+.health-form {
+  padding: 20px;
+}
+
+.form-container {
   width: 50%;
   height: 80%;
 }
-.graph-container{
+.graph-container {
   width: 50%;
   height: 80%;
-
 }
 
-.graph{
+.logo {
+  max-height: 50px;
+}
+
+.graph {
   width: 100%;
   background-color: white;
 }
@@ -35,6 +41,5 @@
 .health-form {
   color: white;
 }
-
 
 @import "custom";

@@ -13,9 +13,11 @@ export default function HealthForm() {
   const saveHealthData = (event) => {
     event.preventDefault();
     event.stopPropagation();
+    const timeObject = new Date();
+    const time = `${timeObject.getHours()}:${timeObject.getMinutes()}`
     dispatch({
       type: "addToHealthData",
-      payload: { energy, muscularFatigue, hunger, productivity },
+      payload: { energy, muscularFatigue, hunger, productivity, time},
     })
     resetFields()
     console.log(state)
@@ -31,8 +33,7 @@ export default function HealthForm() {
   return (
     <Form className="health-form" onSubmit={saveHealthData}>
       <Form.Group controlId="energy">
-        <Form.Label>Energy</Form.Label>
-        <div>{energy}</div>
+        <Form.Label>Energy | {energy}</Form.Label>
         <Form.Control
           type="range"
           min="0"
@@ -43,8 +44,8 @@ export default function HealthForm() {
             setEnergy(parseInt(event.currentTarget.value, 10));
           }}
         />
-        <Form.Label>Muscular Fatigue</Form.Label>
-        <div>{muscularFatigue}</div>
+        <Form.Label>Muscular Fatigue | {muscularFatigue}</Form.Label>
+      
         <Form.Control
           type="range"
           min="0"
@@ -56,8 +57,7 @@ export default function HealthForm() {
           }}
         />
 
-        <Form.Label>Hunger</Form.Label>
-        <div>{hunger}</div>
+        <Form.Label>Hunger | {hunger}</Form.Label>
         <Form.Control
           type="range"
           min="0"
@@ -69,8 +69,7 @@ export default function HealthForm() {
           }}
         />
 
-        <Form.Label>Productivity</Form.Label>
-        <div>{productivity}</div>
+        <Form.Label>Productivity | {productivity}</Form.Label>
         <Form.Control
           type="range"
           min="0"
@@ -82,7 +81,7 @@ export default function HealthForm() {
           }}
         />
       </Form.Group>
-      <Button tabIndex="5" type="submit" variant="primary">Scan Complete</Button>
+      <Button tabIndex="5" type="submit" variant="primary">Log Scan</Button>
     </Form>
   );
 }

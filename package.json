@@ -9,6 +9,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
+    "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.1",
     "react-hot-keys": "^2.6.0",
     "react-router-bootstrap": "^0.25.0",
@@ -21,7 +22,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "regact-app"
   },
   "browserslist": {
     "production": [
@@ -34,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }

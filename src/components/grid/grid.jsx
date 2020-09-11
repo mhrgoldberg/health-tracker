@@ -7,6 +7,7 @@ import HealthForm from "./form";
 import Instructions from "./instructions";
 
 export default function Grid() {
+	setInterval(() => { alert("Time to Scan Your Body") }, 3.6e+6);
   return (
     <Container>
       <Row>
