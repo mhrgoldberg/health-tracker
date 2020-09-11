@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/button";
 import { AppContext } from "../app_context";
 
-
 export default function NavBar() {
   const { dispatch } = useContext(AppContext);
 

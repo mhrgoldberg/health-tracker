@@ -17,6 +17,24 @@
   width: fit-content + 20px;
 }
 
+.form-container{
+  width: 50%;
+  height: 80%;
+}
+.graph-container{
+  width: 50%;
+  height: 80%;
+
+}
+
+.graph{
+  width: 100%;
+  background-color: white;
+}
+
+.health-form {
+  color: white;
+}
 
 
 @import "custom";
