@@ -2,6 +2,7 @@
   "name": "health-tracker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mitchellreiss.github.io/health-tracker/",
   "dependencies": {
     "bootstrap": "^4.5.2",
     "chart.js": "^2.9.3",
@@ -19,10 +20,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
-    "extends": "regact-app"
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
