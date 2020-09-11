@@ -1,11 +1,10 @@
-import React, { useRef, useEffect, useState, useContext } from "react";
-import Chart from "chart.js";
+import React, { useContext } from "react";
 import { AppContext } from "../../app_context";
 import { parseData } from "./graph_utility";
 import { Line } from "react-chartjs-2";
 
 export default function Graph() {
-  const { state, dispatch } = useContext(AppContext);
+  const { state } = useContext(AppContext);
 	const data = parseData(state.healthData);
 	
   const chartData = {
@@ -65,7 +64,6 @@ export default function Graph() {
           order: 1,
           pointRadius: 5,
 					pointStyle: "triangle",
-					fill: false,
         },
       ],
       borderWidth: 1,

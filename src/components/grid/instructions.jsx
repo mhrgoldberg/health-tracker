@@ -6,13 +6,19 @@ import Col from "react-bootstrap/Col";
 
 export default function Instructions() {
   return (
-    <Container>
+    <Container className="instructions">
       <Row>
-        <Col className="form-container">
-
-        </Col>
-        <Col className="graph-container">
-        </Col>
+          This app is a simple way of tracking the state of your body throughout the day. The app will alert you each hour to fill out a new scan.
+      </Row>
+      <br/>
+      <Row>
+        1. To get started press TAB to start writing.
+      </Row>
+      <Row>
+        2. Use the ARROW keys to adjust the sliders.
+      </Row>
+      <Row>
+        3. Press ENTER to log scan
       </Row>
     </Container>
   );
