@@ -11,15 +11,22 @@ export default function HealthForm() {
   const { state, dispatch } = useContext(AppContext);
 
   const saveHealthData = (event) => {
-    debugger;
     event.preventDefault();
     event.stopPropagation();
     dispatch({
       type: "addToHealthData",
       payload: { energy, muscularFatigue, hunger, productivity },
-    }, () => console.log(state))
-
+    })
+    resetFields()
+    console.log(state)
   };
+
+  const resetFields = () => {
+    setEnergy(0);
+    setMuscularFatigue(0);
+    setHunger(0);
+    setProductivity(0);
+  }
 
   return (
     <Form className="health-form" onSubmit={saveHealthData}>
@@ -30,56 +37,52 @@ export default function HealthForm() {
           type="range"
           min="0"
           max="5"
-          step="0.5"
           value={energy}
+          tabIndex="1"
           onChange={(event) => {
-            setEnergy(event.currentTarget.value);
+            setEnergy(parseInt(event.currentTarget.value, 10));
           }}
         />
-      </Form.Group>
-      <Form.Group controlId="muscularFatigue">
         <Form.Label>Muscular Fatigue</Form.Label>
         <div>{muscularFatigue}</div>
         <Form.Control
           type="range"
           min="0"
           max="5"
-          step="0.5"
           value={muscularFatigue}
+          tabIndex="2"
           onChange={(event) => {
-            setMuscularFatigue(event.currentTarget.value);
+            setMuscularFatigue(parseInt(event.currentTarget.value, 10));
           }}
         />
-      </Form.Group>
-      <Form.Group controlId="hunger">
+
         <Form.Label>Hunger</Form.Label>
         <div>{hunger}</div>
         <Form.Control
           type="range"
           min="0"
           max="5"
-          step="0.5"
           value={hunger}
+          tabIndex="3"
           onChange={(event) => {
-            setHunger(event.currentTarget.value);
+            setHunger(parseInt(event.currentTarget.value, 10));
           }}
         />
-      </Form.Group>
-      <Form.Group controlId="productivity">
+
         <Form.Label>Productivity</Form.Label>
         <div>{productivity}</div>
         <Form.Control
           type="range"
           min="0"
           max="5"
-          step="0.5"
           value={productivity}
+          tabIndex="4"
           onChange={(event) => {
-            setProductivity(event.currentTarget.value);
+            setProductivity(parseInt(event.currentTarget.value, 10));
           }}
         />
       </Form.Group>
-      <Button variant="primary">Scan Complete</Button>
+      <Button tabIndex="5" type="submit" variant="primary">Scan Complete</Button>
     </Form>
   );
 }
