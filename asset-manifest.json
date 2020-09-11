@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/health-tracker/static/css/main.038d378c.chunk.css",
+    "main.js": "/health-tracker/static/js/main.328df3a2.chunk.js",
+    "main.js.map": "/health-tracker/static/js/main.328df3a2.chunk.js.map",
+    "runtime-main.js": "/health-tracker/static/js/runtime-main.405f84bd.js",
+    "runtime-main.js.map": "/health-tracker/static/js/runtime-main.405f84bd.js.map",
+    "static/js/2.dc5586ba.chunk.js": "/health-tracker/static/js/2.dc5586ba.chunk.js",
+    "static/js/2.dc5586ba.chunk.js.map": "/health-tracker/static/js/2.dc5586ba.chunk.js.map",
+    "index.html": "/health-tracker/index.html",
+    "precache-manifest.81f95a81be84806fcc4b616553bafc3a.js": "/health-tracker/precache-manifest.81f95a81be84806fcc4b616553bafc3a.js",
+    "service-worker.js": "/health-tracker/service-worker.js",
+    "static/css/main.038d378c.chunk.css.map": "/health-tracker/static/css/main.038d378c.chunk.css.map",
+    "static/js/2.dc5586ba.chunk.js.LICENSE.txt": "/health-tracker/static/js/2.dc5586ba.chunk.js.LICENSE.txt",
+    "static/media/human.7e4dbd4c.svg": "/health-tracker/static/media/human.7e4dbd4c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.405f84bd.js",
+    "static/js/2.dc5586ba.chunk.js",
+    "static/css/main.038d378c.chunk.css",
+    "static/js/main.328df3a2.chunk.js"
+  ]
+}
